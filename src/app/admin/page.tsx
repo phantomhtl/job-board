@@ -1,4 +1,3 @@
-import React from "react";
 import prisma from "@/lib/prisma";
 import H1 from "@/components/ui/h1";
 import Link from "next/link";

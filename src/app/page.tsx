@@ -1,6 +1,3 @@
-import React from "react";
-import prisma from "@/lib/prisma";
-import JobListItem from "@/components/JobListItem";
 import JobFilterSideBar from "@/components/ui/JobFilterSideBar";
 import H1 from "@/components/ui/h1";
 import JobResults from "@/components/ui/JobResults";
@@ -59,8 +56,10 @@ export default async function Home({
       </div>
       <section className="flex flex-col gap-4 md:flex-row">
         <JobFilterSideBar defaultValues={filterValues} />
-        <JobResults filterValues={filterValues} page={page? parseInt(page):undefined} />
-
+        <JobResults
+          filterValues={filterValues}
+          page={page ? parseInt(page) : undefined}
+        />
       </section>
     </main>
   );
